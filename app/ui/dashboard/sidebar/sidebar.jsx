@@ -8,6 +8,7 @@ import {
   MdAttachMoney,
   MdOutlineSettings,
   MdHelpCenter,
+  MdLogout,
 } from "react-icons/md"
 import Image from 'next/image';
 
@@ -43,17 +44,17 @@ const menuItems = [{
   list: [
     {
       title: "Aziende",
-      path: "/dashboard",
+      path: "/dashboard/sedi2",
       icon: <MdDashboard/>,
     },
     {
       title: "Sedi",
-      path: "/dashboard/",
+      path: "/dashboard/sedi3",
       icon: <MdSupervisedUserCircle/>,
     },
     {
-      title: "persone",
-      path: "/dashboard/",
+      title: "Persone",
+      path: "/dashboard/sedi4",
       icon: <MdShoppingBag/>,
     },    
   ],
@@ -63,17 +64,17 @@ const menuItems = [{
   list: [
     {
       title: "Aziende",
-      path: "/dashboard/",
+      path: "/dashboard/sedi5",
       icon: <MdSupervisedUserCircle/>,
     },
     {
       title: "Sedi",
-      path: "/dashboard/",
+      path: "/dashboard/sedi6",
       icon: <MdShoppingBag/>,
     },
     {
       title: "Persone",
-      path: "/dashboard/",
+      path: "/dashboard/sedi7",
       icon: <MdAttachMoney/>,
     },
     
@@ -120,6 +121,10 @@ const Sidebar = () => {
         </li>
     ))}
       </ul>
+      <button className={styles.logout}>
+        <MdLogout />
+        Logout
+      </button>
     </div>
   );
 };
