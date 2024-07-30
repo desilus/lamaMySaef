@@ -13,7 +13,7 @@ const Rightbar = () => {
           <span className={styles.notification}>COMING SOON </span>
           <h3 className={styles.title}>Come usare la nuova versione di MySaef</h3>
           <span className={styles.subtitle}>Tempo di visione 4 minuti</span>
-            <p> className={styles.description}Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <p className={styles.description}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <button className={styles.button}>
               <MdPlayCircleFilled />
               Guarda
@@ -27,7 +27,7 @@ const Rightbar = () => {
           <span className={styles.notification}>IT'S HAPPENING</span>
           <h3 className={styles.title}>Nuovo evento team building</h3>
           <span className={styles.subtitle}>Gareggia con i colleghi</span>
-            <p> className={styles.description}Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <p className={styles.description}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
             <button className={styles.button}>
               <MdReadMore />
               Impara
