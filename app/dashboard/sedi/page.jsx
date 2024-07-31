@@ -26,7 +26,7 @@ const Sedi = () => {
         <tbody>
           <tr>
             <td><div className={styles.sedi}>
-              <Image src="/noproduct.jpg" alt="" width={40} height={40} className={styles.sediImage} />
+              <Image src="/noproduct.jpg" alt="" width={80} height={80} className={styles.sediImage} />
               Brescia
               </div>
               </td>

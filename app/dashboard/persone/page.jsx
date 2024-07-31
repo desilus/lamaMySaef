@@ -4,8 +4,17 @@ import Search from '/app/ui/dashboard/search/search'
 import Pagination from '/app/ui/dashboard/pagination/pagination'
 import Link from 'next/link'
 import Image from 'next/image'
+import { fetchUsers } from '/app/lib/data'
 
-const Persone = () => {
+const Persone =   async({searchParams}) => {
+  const q = searchParams?.q || "";
+  const users = await fetchUsers(q);
+  // console.log(users)
+
+  // () => {
+  // async() => {
+  // const users = await fetchUsers();
+  // console.log(users)
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -18,7 +27,7 @@ const Persone = () => {
         <thead>
           <tr>
             <td>Nome</td>
-            
+
             <td>Creato Il</td>
             <td>Ruolo</td>
             <td>Corso</td>
@@ -26,25 +35,32 @@ const Persone = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {users.map((user)=>(
+
+            <tr key={user.id}>
             <td><div className={styles.user}>
-              <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
-              John Doe
+              <Image src={user.img || "/noavatar.png" }
+              alt="" 
+              width={40} 
+              height={40} 
+              className={styles.userImage} />
+              {user.username}
               </div>
               </td>
-              <td>12/01/2024</td>
-              <td>Impiegato</td>
-              <td>Generale</td>
+              <td>{user.createdAt?.toString().slice(4,16)}</td>
+              <td>{user.isAdmin ? "Admin" : "Client"}</td>
+              <td>{user.isActive ? "attivo" : "non attivo"}</td>
               <td>
                 <div className={styles.buttons}>
 
-                <Link href="/dashboard/persone/test">
+                <Link href={`/dashboard/persone/${user.id}`}>
                 <button className={`${styles.button} ${styles.view}`}>Visualizza</button>
                 </Link>
                 <button className={`${styles.button} ${styles.delete}`}>Cancella</button>
                 </div>
               </td>
           </tr>
+            ))}
         </tbody>
       </table>
       <Pagination />
