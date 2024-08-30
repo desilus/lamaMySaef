@@ -127,7 +127,7 @@ const Sidebar = async () => {
     ))}
       </ul>
       <form action={async ()=>{
-        "use server";
+        "use server"
         await signOut();
       }}>
       <button className={styles.logout}>
