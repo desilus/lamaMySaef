@@ -19,7 +19,7 @@ const LoginForm = () => {
       <h1>Login</h1>
         <input type='text' placeholder='username' name='username'/>
         <input type='password' placeholder='password' name='password'/>
-        <button>Accedi</button>
+        <button type="submit">Accedi</button>
         {err && err}
       </form>
   )

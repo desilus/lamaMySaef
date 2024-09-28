@@ -10,7 +10,7 @@
 }
 
 .container:hover{
-    background-color: #2e374a;
+    background-color: white;
 }
 
 .texts{
@@ -23,3 +23,4 @@
     font-size: 24px;
     font-weight: 500;
 }
+

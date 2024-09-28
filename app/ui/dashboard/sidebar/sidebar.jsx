@@ -40,48 +40,7 @@ const menuItems = [{
   ],
   
 },
-{
-  title: "Sedi",
-  list: [
-    {
-      title: "Aziende",
-      path: "/dashboard/sedi2",
-      icon: <MdDashboard/>,
-    },
-    {
-      title: "Sedi",
-      path: "/dashboard/sedi3",
-      icon: <MdSupervisedUserCircle/>,
-    },
-    {
-      title: "Persone",
-      path: "/dashboard/sedi4",
-      icon: <MdShoppingBag/>,
-    },    
-  ],
-},
-{
-  title: "Persone",
-  list: [
-    {
-      title: "Aziende",
-      path: "/dashboard/sedi5",
-      icon: <MdSupervisedUserCircle/>,
-    },
-    {
-      title: "Sedi",
-      path: "/dashboard/sedi6",
-      icon: <MdShoppingBag/>,
-    },
-    {
-      title: "Persone",
-      path: "/dashboard/sedi7",
-      icon: <MdAttachMoney/>,
-    },
-    
-  ],
-  
-},
+
 {
   title: "User",
   list: [
